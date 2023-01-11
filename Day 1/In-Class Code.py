@@ -8,7 +8,6 @@ print("Hello World!!")
 
 print("Hello " + input("What is your name? "))
 
-
 # Lesson 3
 name = "Jack"
 print(name)
@@ -22,3 +21,4 @@ length = len(name)
 print(length)
 
 # Always name your variables explicitly because of future reference
+

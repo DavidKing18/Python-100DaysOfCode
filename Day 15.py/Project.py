@@ -1,5 +1,6 @@
 from main import MENU, resources
 
+
 def statement_report():
     print(f"Water: {resources['water']}ml")
     print(f"Milk: {resources['milk']}ml")
@@ -63,9 +64,9 @@ def failed_output_statement(coffee_type):
     if coffee_type == 'espresso':
         if check_water(coffee_type) == check_coffee(coffee_type) == True:
             print("Sorry, there is not enough water nor coffee.")
-        elif check_water("espresso") == False:
+        elif not check_water("espresso"):
             print("Sorry, there is not enough water.")
-        elif check_coffee("espresso") == False:
+        elif not check_coffee("espresso"):
             print("Sorry, there is not enough milk.")
     else:
         if check_water(coffee_type) == check_milk(coffee_type) == check_coffee(coffee_type) == True:
@@ -76,11 +77,11 @@ def failed_output_statement(coffee_type):
             print("Sorry, there is not enough water nor coffee.")
         elif check_milk(coffee_type) == check_coffee(coffee_type) == False:
             print("Sorry, there is not enough coffee nor milk.")
-        elif check_water(coffee_type) == False:
+        elif not check_water(coffee_type):
             print("Sorry, there is not enough water.")
-        elif check_milk(coffee_type) == False:
+        elif not check_milk(coffee_type):
             print("Sorry, there is not enough milk.")
-        elif check_coffee(coffee_type) == False:
+        elif not check_coffee(coffee_type):
             print("Sorry, there is not enough cofffee.")
 
 
@@ -90,7 +91,7 @@ machine_on = True
 while machine_on:
     order = input("Hi there! I'm a Coffee Machine.\nWhat would you like? (espresso/latte/cappuccino): ").lower()
     if (order == 'latte') or (order == 'espresso') or (order == 'cappuccino'):
-        if enough_resource(order) == True:
+        if enough_resource(order):
             print("Please insert coins.")
             quarters = int(input("How many quarters?: "))
             dimes = int(input("How many dimes?: "))
@@ -100,7 +101,7 @@ while machine_on:
         statement_report()
 
     elif order == 'espresso':
-        if enough_resource(order) == True:
+        if enough_resource(order):
             amount_paid = sum_up()
             if can_buy(order):
                 money += MENU[order]['cost']
@@ -111,7 +112,7 @@ while machine_on:
             failed_output_statement(order)
 
     elif order == 'latte':
-        if enough_resource(order) == True:
+        if enough_resource(order):
             amount_paid = sum_up()
             if can_buy(order):
                 money += MENU[order]['cost']
@@ -122,7 +123,7 @@ while machine_on:
             failed_output_statement(order)
 
     elif order == 'cappuccino':
-        if enough_resource(order) == True:
+        if enough_resource(order):
             amount_paid = sum_up()
             if can_buy(order):
                 money += MENU[order]['cost']
