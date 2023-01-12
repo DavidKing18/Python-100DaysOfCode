@@ -1,6 +1,6 @@
 from random import choice
 from art import logo, vs
-from game_data import data 
+from game_data import data
 from replit import clear
 
 first_identity = choice(data)
@@ -15,11 +15,11 @@ while should_continue:
     data.append(first_identity)
     second_identity = choice(data)
 
-    name1 = first_identity['name'] 
+    name1 = first_identity['name']
     followers1 = first_identity['follower_count']
     description1 = first_identity['description']
     country1 = first_identity['country']
-        # Repeated format - Could use a function here
+    # Repeated format - Could use a function here
     name2 = second_identity['name']
     followers2 = second_identity['follower_count']
     description2 = second_identity['description']
@@ -29,12 +29,14 @@ while should_continue:
     print(vs)
     print(f"Against B: {name2}, a {description2}, from {country2}.")
     response = input("Who has more followers on IG? Type 'A' or 'B': ").lower()
-	
+
+
     def check(user_response):
         if user_response == 'a':
             return (followers1 > followers2)
-        elif user_response  == 'b':
-            return (followers2 > followers1)    
+        elif user_response == 'b':
+            return (followers2 > followers1)
+
 
     if check(response) == True:
         score += 1

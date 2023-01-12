@@ -13,7 +13,6 @@ print(3.14159)
 True
 False
 
-
 '''Lesson 2'''
 
 # num_char = len(input("What is your name?"))
@@ -29,14 +28,13 @@ print(type(a))
 print(70 + float("100.5"))
 print(str(70) + str(100))
 
-
 '''Lesson 3'''
 
-3 + 5 # Addition 
-7 - 4 # Subtraction
-3 * 2 # Multiplication 
-6 / 3 # Division - Results in a float
-2 ** 3 #Exponential
+3 + 5  # Addition
+7 - 4  # Subtraction
+3 * 2  # Multiplication
+6 / 3  # Division - Results in a float
+2 ** 3  # Exponential
 
 # Order of Operation - PEMDAS
 # Parenthesis - ()
@@ -46,17 +44,15 @@ print(str(70) + str(100))
 # Addition - (+)
 # Subtraction - (-)
 
-print(3 * 3 + 3 / 3 - 3) # 7.0
-print(3 * (3 + 3) / 3 - 3) # 3.0
-
+print(3 * 3 + 3 / 3 - 3)  # 7.0
+print(3 * (3 + 3) / 3 - 3)  # 3.0
 
 '''Lesson 4'''
-print(round(8/3, 2))
-print(8//3)
-
+print(round(8 / 3, 2))
+print(8 // 3)
 
 result = 4 / 2
-result /=2
+result /= 2
 result *= 3
 print(result)
 
@@ -69,10 +65,9 @@ print(score)
 score -= 2
 print(score)
 
-
 # String Formatting
 score = 0
 height = 1.8
 isWinning = True
-#f-String
+# f-String
 print(f"Your score is {score}, your height is {height}, you are winning? {isWinning}")

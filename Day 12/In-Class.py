@@ -1,9 +1,12 @@
 ''' Lesson 1 - Namespace: Local vs. Global '''
 
 enemies = 1
+
+
 def increase_enemies():
-	enemies = 2 
-	print(f"enemies inside function: {enemies}")
+    enemies = 2
+    print(f"enemies inside function: {enemies}")
+
 
 increase_enemies()
 print(f"enemies outside function: {enemies}")
@@ -19,39 +22,44 @@ print(f"enemies outside function: {enemies}")
 # Global Scope
 player_health = 10
 
-def game():
-	def drink_potion():
-		potion_strength = 2
-		print(player_health)
-	drink_potion()
 
+def game():
+    def drink_potion():
+        potion_strength = 2
+        print(player_health)
+
+    drink_potion()
 
 
 # There is no block scope
 
 game_level = 3
-def create_enemy():
-	enemies = ["Skeleton", "Zombie", "Alien"]
-	if game_level < 5:
-		new_enemy = enemies[0]
 
-	print(new_enemy)
+
+def create_enemy():
+    enemies = ["Skeleton", "Zombie", "Alien"]
+    if game_level < 5:
+        new_enemy = enemies[0]
+
+    print(new_enemy)
 
 
 # Modifying Global Scope
 
-	
+
 enemies = 1
+
+
 def increase_enemies():
-	global enemies # Always try to avoid.
-	enemies += 2
-	print(f"enemies inside function: {enemies}")
+    global enemies  # Always try to avoid.
+    enemies += 2
+    print(f"enemies inside function: {enemies}")
+
 
 increase_enemies()
 print(f"enemies outside function: {enemies}")
 
-
-#Global Constants
+# Global Constants
 
 PI = 3.14159
 URL = "https://www.google.com"

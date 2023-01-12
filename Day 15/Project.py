@@ -27,7 +27,7 @@ def check_coffee(coffee):
 
 
 def sum_up():
-    amount_in_dollars =  (quarters/4) + (dimes/10) + (nickels/20) + (pennies/100)
+    amount_in_dollars = (quarters / 4) + (dimes / 10) + (nickels / 20) + (pennies / 100)
     return amount_in_dollars
 
 
@@ -85,7 +85,7 @@ def failed_output_statement(coffee_type):
             print("Sorry, there is not enough cofffee.")
 
 
-money = 0 
+money = 0
 machine_on = True
 
 while machine_on:
@@ -139,5 +139,5 @@ while machine_on:
         resources["coffee"] = 100
     elif order == "off":
         machine_on = False
-    else: 
+    else:
         print("You have entered an invalid input. Again? 🙂")

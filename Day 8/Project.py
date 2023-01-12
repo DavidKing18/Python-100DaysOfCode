@@ -1,41 +1,44 @@
 "CEASER CIPHER PROJECT"
 
 from art import logo
+
 print(logo)
 print("WELCOME TO MY CEASER CIPHER ENCRYPTION SCRIPT 🙂")
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+            'v', 'w', 'x', 'y', 'z']
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n")) % 26
 
+
 def ceaser(start_text, shift_amount, cipher_direction):
-	shifted_alphabet = alphabet[shift_amount:] + alphabet[:shift_amount]
-	end_text_list = []
-	for letter in start_text:
-		if letter in alphabet:
-			if cipher_direction == "encode":
-				index = alphabet.index(letter)
-				end_text_list.append(shifted_alphabet[index])
-			elif direction == "decode":
-				index = shifted_alphabet.index(letter)
-				end_text_list.append(alphabet[index])
-		else:
-			end_text_list.append(letter)
-	end_text = "".join(end_text_list)
-	print(f"The {cipher_direction}d text is {end_text}")
-	
+    shifted_alphabet = alphabet[shift_amount:] + alphabet[:shift_amount]
+    end_text_list = []
+    for letter in start_text:
+        if letter in alphabet:
+            if cipher_direction == "encode":
+                index = alphabet.index(letter)
+                end_text_list.append(shifted_alphabet[index])
+            elif direction == "decode":
+                index = shifted_alphabet.index(letter)
+                end_text_list.append(alphabet[index])
+        else:
+            end_text_list.append(letter)
+    end_text = "".join(end_text_list)
+    print(f"The {cipher_direction}d text is {end_text}")
+
+
 ceaser(start_text=text, shift_amount=shift, cipher_direction=direction)
 
 restart = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n").lower()
 while restart == 'yes':
-	direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-	text = input("Type your message:\n").lower()
-	shift = int(input("Type the shift number:\n")) % 26
-	ceaser(start_text=text, shift_amount=shift, cipher_direction=direction)
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n")) % 26
+    ceaser(start_text=text, shift_amount=shift, cipher_direction=direction)
 if restart == "no":
-	print("Goodbye✌️")
- 
+    print("Goodbye✌️")
 
 # OR
 
@@ -83,4 +86,4 @@ if restart == "no":
 #   restart = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
 #   if restart == "no":
 #     should_end = True 
-#     print("Goodbye") 
+#     print("Goodbye")
