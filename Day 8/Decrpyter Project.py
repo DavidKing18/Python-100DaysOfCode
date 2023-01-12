@@ -1,7 +1,7 @@
 "CEASER CIPHER PROJECT"
-import english_words
+from english_words import get_english_words_set
+words = get_english_words_set(['web2'], lower=True)
 
-words = english_words.english_words_lower_alpha_set
 
 from art import logo
 

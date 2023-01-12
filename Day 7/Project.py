@@ -2,10 +2,10 @@
 from replit import clear
 import random
 import hangman_art
-import hangman_words
+from hangman_words import list_of_words
 
 # TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
-words = hangman_words.word_list
+words = list_of_words
 stages = hangman_art.stages
 
 # TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.
