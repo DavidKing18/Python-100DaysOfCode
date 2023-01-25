@@ -1,4 +1,4 @@
-'''PASSWORD GENERATOR PROJECT '''
+"""PASSWORD GENERATOR PROJECT """
 
 import random
 
