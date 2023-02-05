@@ -1,4 +1,4 @@
-#This file will need to use the DataManager,FlightSearch, FlightData, NotificationManager classes to achieve the program requirements.
+# This file will need to use the DataManager,FlightSearch, FlightData, NotificationManager classes to achieve the program requirements.
 from datetime import datetime, timedelta
 from pprint import pprint
 import requests
@@ -9,7 +9,7 @@ from flight_search import FlightSearch
 from notification_manager import NotificationManager
 
 sheety_endpoint = "https://api.sheety.co/0ddc17c284692df155ab4b36a99c5004/flightDeals/prices"
-ORIGIN_CITY_IATA = "NIG"
+ORIGIN_CITY_IATA = "LOS"
 
 data_manager = DataManager()
 flight_search = FlightSearch()
@@ -35,11 +35,16 @@ for destination in sheet_data:
         ORIGIN_CITY_IATA,
         destination["iataCode"],
         from_time=tomorrow,
-        to_time=six_month_from_today
+        to_time=six_month_from_today,
+        destination_city=destination["city"]
     )
-    if flight.price < destination["lowestPrice"]:
-        notification_manager.send_sms(
-            message=f"Low price alert! Only £{flight.price} to fly from {flight.origin_city}-{flight.origin_airport} "
-                    f"to {flight.destination_city}-{flight.destination_airport}, from {flight.out_date} "
-                    f"to {flight.return_date}."
-        )
+    try:
+        price = flight.price
+    except AttributeError:
+        pass
+    else:
+        if flight.price < destination["lowestPrice"]:
+            pass
+            # print("\nLow price alert! Only £{flight.price} to fly from {flight.origin_city}-{flight.origin_airport} "
+            #       f"to {flight.destination_city}-{flight.destination_airport}, from {flight.out_date} "
+            #       f"to {flight.return_date}.")
