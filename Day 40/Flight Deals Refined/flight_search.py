@@ -1,12 +1,13 @@
 import requests
 from flight_data import FlightData
+from pprint import pprint
 
 TEQUILA_API_KEY = "uTi5ABWb2PBZ0CHXzkBIZbkyErs1Vor4"
 TEQUILA_ENDPOINT = "https://api.tequila.kiwi.com"
 
 
 class FlightSearch:
-    #This class is responsible for talking to the Flight Search API.
+    # This class is responsible for talking to the Flight Search API.
     def get_iataCode(self, city_name):
         header = {
             "apikey": TEQUILA_API_KEY
@@ -44,15 +45,32 @@ class FlightSearch:
         try:
             data = response.json()["data"][0]
         except IndexError:
-            query["max_stopovers"] = 3
-            response = requests.get(
-                url=f"{TEQUILA_ENDPOINT}/v2/search",
-                headers=headers,
-                params=query,
-            )
-            print(response.json())
-            print(f"No flights found for {destination_city.title()}.")
-            return None
+            try:
+                query["max_stopovers"] = 2
+                response = requests.get(
+                    url=f"{TEQUILA_ENDPOINT}/v2/search",
+                    headers=headers,
+                    params=query,
+                )
+                data = response.json()["data"][0]
+            except IndexError:
+                print(f"No flights found for {destination_city.title()}.")
+                return None
+                # pprint(response.json())
+            else:
+                flight_data = FlightData(
+                    price=data["price"],
+                    origin_city=data["route"][0]["cityFrom"],
+                    origin_airport=data["route"][0]["flyFrom"],
+                    destination_city=data["route"][1]["cityTo"],
+                    destination_airport=data["route"][1]["flyTo"],
+                    out_date=data["route"][0]["local_departure"].split("T")[0],
+                    return_date=data["route"][-1]["local_departure"].split("T")[0]
+                )
+                flight_data.stop_overs = int(len(data["route"])/2) - 1
+                flight_data.via_city = data["route"][0]["cityTo"]
+                print(f"{flight_data.destination_city}: £{flight_data.price}")
+                return flight_data
         except KeyError:
             return None
 
