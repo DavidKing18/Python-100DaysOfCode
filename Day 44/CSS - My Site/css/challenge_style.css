@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.top_container {
+    background-color: #E4F9F5;
+    margin: 0 0 0 0;
+    padding: 20px;
+}
