@@ -9,5 +9,25 @@ h1 {
 .top_container {
     background-color: #E4F9F5;
     margin: 0 0 0 0;
+    height: 200px;
+    width: 200px;
+    border: solid 10px black;
     padding: 20px;
 }
+
+.middle_container {
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    border: solid 20px black;
+    margin-left: 260px;
+}
+
+.bottom_container {
+    background-color: yellow;
+    height: 200px;
+    width: 200px;
+    border: solid 10px black;
+    margin-left: 500px;
+}
+
