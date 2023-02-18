@@ -1,6 +1,7 @@
 import datetime as dt
 import smtplib
 from random import choice
+import os
 
 current_date = dt.datetime.now()
 current_weekday = current_date.weekday()
@@ -11,7 +12,7 @@ with open("quotes.txt") as quote_file:
 
 if current_weekday == 5 or current_date == 1:
     my_email = "cornflakeschicago@gmail.com"
-    password = "tsjkmtsobmqbolxg"
+    password = os.environ["CHICAGO_MAIL_PASSWORD"]
     receiver_address = "davidoadeleke90@gmail.com"
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()

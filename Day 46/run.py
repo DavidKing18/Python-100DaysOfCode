@@ -10,7 +10,6 @@ SPOTIPY_CLIENT_SECRET = os.environ["SPOTIPY_CLIENT_SECRET"]
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=SPOTIPY_CLIENT_ID, client_secret=SPOTIPY_CLIENT_SECRET,
                                                redirect_uri="http://example.com", scope=scope))
 
-
 query = "track: safweqwdfqf year: 2000"
 
 song = sp.search(q=query, type=["track"], limit=1)

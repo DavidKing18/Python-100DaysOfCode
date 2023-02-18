@@ -9,7 +9,7 @@ TWILIO_VIRTUAL_NUMBER = "+12058329459"
 TWILIO_VERIFIED_NUMBER = '+2348083603251'
 
 my_email = "cornflakeschicago@gmail.com"
-password = "tsjkmtsobmqbolxg"
+password = os.environ["CHICAGO_MAIL_PASSWORD"]
 
 class NotificationManager:
 

@@ -2,10 +2,11 @@
 #       How to Send Emails with Python using SMTP
 ############################################################
 #
+import os
 import smtplib
 
 my_email = "cornflakeschicago@gmail.com"
-password = "tsjkmtsobmqbolxg"
+password = os.environ["CHICAGO_MAIL_PASSWORD"]
 
 with smtplib.SMTP("smtp.gmail.com", 587) as connection:
     connection.starttls()
