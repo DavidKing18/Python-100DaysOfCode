@@ -67,8 +67,12 @@ class InternetSpeedTwitterBot:
 
 
 bot = InternetSpeedTwitterBot()
-bot.get_internet_speed()
-bot.tweet_at_provider()
 
+bot.get_internet_speed()
 print(f"down: {bot.down}")
 print(f"up: {bot.up}")
+
+if PROMISED_UP > float(bot.up) or PROMISED_DOWN > float(bot.down):
+    bot.tweet_at_provider()
+
+
