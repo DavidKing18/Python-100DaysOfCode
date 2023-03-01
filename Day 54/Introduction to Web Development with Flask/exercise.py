@@ -6,7 +6,7 @@ def speed_calc_decorator(function):
         current_time = time.time()
         function()
         speed = time.time() - current_time
-        print(f"{function.__name__}: {speed}")
+        print(f"{function.__name__} run speed: {speed}")
 
     return wrapper_function
 
