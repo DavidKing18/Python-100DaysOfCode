@@ -1,0 +1,16 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}Success{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Successfully added restaurant/café.</h1>
+    <a href="{{ url_for('home') }}">Back to home</a>
+</div>
+{% endblock %}

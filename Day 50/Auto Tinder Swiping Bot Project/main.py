@@ -5,8 +5,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
 import os
 
+
 chrome_driver_path = "c:\\Development\\chromedriver.exe"
 driver = webdriver.Chrome(executable_path=chrome_driver_path)
+
 
 URL = "https://tinder.com/"
 EMAIL = "cornflakeschicago@gmail.com"

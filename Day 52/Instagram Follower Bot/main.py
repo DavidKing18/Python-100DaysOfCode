@@ -5,6 +5,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import ElementClickInterceptedException
 import os
 
+
 edge_driver_path = "c:\\Development\\msedgedriver.exe"
 INSTAGRAM_URL = "https://www.instagram.com"
 USERNAME = "cornflakeschicago"
