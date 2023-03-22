@@ -1,11 +1,11 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, URL
 from flask_ckeditor import CKEditor, CKEditorField
-
+from datetime import datetime
 
 # Delete this code:
 # import requests
@@ -40,21 +40,21 @@ class CreatePostForm(FlaskForm):
     subtitle = StringField("Subtitle", validators=[DataRequired()])
     author = StringField("Your Name", validators=[DataRequired()])
     img_url = StringField("Blog Image URL", validators=[DataRequired(), URL()])
-    body = StringField("Blog Content", validators=[DataRequired()])
+    body = CKEditorField("Blog Content", validators=[DataRequired()])
     submit = SubmitField("Submit Post")
-
-
-with app.app_context():
-    posts = db.session.query(BlogPost).all()
 
 
 @app.route('/')
 def get_all_posts():
+    with app.app_context():
+        posts = BlogPost.query.all()
     return render_template("index.html", all_posts=posts)
 
 
 @app.route("/post/<int:index>")
 def show_post(index):
+    with app.app_context():
+        posts = BlogPost.query.all()
     requested_post = None
     for blog_post in posts:
         if blog_post.id == index:
@@ -73,9 +73,33 @@ def contact():
     return render_template("contact.html")
 
 
-@app.route("/edit")
-def edit_post():
-    return ""
+@app.route("/edit-post/<post_id>")
+def edit_post(post_id):
+    post = BlogPost.query.get(post_id)
+    edit_form = CreatePostForm()
+    post_id = request.args.get("post_id")
+    return render_template("make-post.html", title="Edit Post", form=edit_form)
+
+
+@app.route("/new-post", methods=["GET", "POST"])
+def add_post():
+    post_form = CreatePostForm()
+    if post_form.validate_on_submit():
+        today = datetime.now()
+        with app.app_context():
+            db.create_all()
+            new_post = BlogPost(
+                date=f"{today.strftime('%B')} {today.strftime('%d')}, {today.strftime('%Y')}",
+                title=request.form.get("title"),
+                subtitle=request.form.get('subtitle'),
+                author=request.form.get("author"),
+                img_url=request.form.get("img_url"),
+                body=request.form.get("body")
+            )
+            db.session.add(new_post)
+            db.session.commit()
+            return redirect(url_for('get_all_posts'))
+    return render_template("make-post.html", form=post_form, title="New Post")
 
 
 if __name__ == "__main__":
