@@ -65,4 +65,3 @@ while True:
         cookie_per_s = driver.find_element(By.ID, "cps").text
         print(cookie_per_s)
         break
-
