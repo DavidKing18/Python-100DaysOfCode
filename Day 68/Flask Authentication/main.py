@@ -9,6 +9,13 @@ app.config['SECRET_KEY'] = 'any-secret-key-you-choose'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.get(user_id)
 
 
 # CREATE TABLE IN DB
@@ -49,7 +56,7 @@ def login():
 
 @app.route('/secrets')
 @login_required
-def secrets(name):
+def secrets():
     return render_template("secrets.html")
 
 
