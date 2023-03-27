@@ -15,7 +15,7 @@ login_manager.init_app(app)
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.get(user_id)
+    return User.query.get(int(user_id))
 
 
 # CREATE TABLE IN DB
@@ -30,40 +30,64 @@ class User(UserMixin, db.Model):
 
 @app.route('/')
 def home():
-    return render_template("index.html")
+    return render_template("index.html", logged_in=current_user.is_authenticated)
 
 
 @app.route('/register', methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        encrypted_password = generate_password_hash(password=request.form.get("password"),
-                                                    method="pbkdf2:sha256",
-                                                    salt_length=8)
-        with app.app_context():
-            new_user = User(email=request.form.get("email"),
-                            password=encrypted_password,
-                            name=request.form.get("name"))
-            db.session.add(new_user)
-            db.session.commit()
-        return render_template('secrets.html', name=request.form.get("name"))
+        email = request.form.get("email")
+        if User.query.filter_by(email=email).first() is not None:
+            flash(message="You already signed up with this email, log in instead.")
+            return redirect(url_for("login"))
+        else:
+            encrypted_password = generate_password_hash(password=request.form.get("password"),
+                                                        method="pbkdf2:sha256",
+                                                        salt_length=8)
+            with app.app_context():
+                new_user = User(email=email,
+                                password=encrypted_password,
+                                name=request.form.get("name"))
+                db.session.add(new_user)
+                db.session.commit()
+
+                login_user(new_user)
+            return redirect(url_for('secrets'))
     return render_template("register.html")
 
 
-@app.route('/login')
+@app.route('/login', methods=["GET", "POST"])
 def login():
-    return render_template("login.html")
+    if request.method == "POST":
+        email = request.form.get("email")
+        password = request.form.get("password")
+
+        user = User.query.filter_by(email=email).first()
+
+        if user is None:
+            flash(message="That email does not exist, please try again.", category="message")
+            return redirect(url_for("login"))
+        elif not check_password_hash(user.password, password):
+            flash(message="Password incorrect, please try again.")
+            return redirect(url_for('login'))
+        elif check_password_hash(user.password, password):
+            login_user(user)
+            return redirect(url_for('secrets'))
+    return render_template("login.html", logged_in=current_user.is_authenticated)
 
 
 @app.route('/secrets')
 @login_required
 def secrets():
-    return render_template("secrets.html")
+    return render_template("secrets.html", name=current_user.name.split(" ")[0],
+                           logged_in=current_user.is_authenticated)
 
 
 @app.route('/logout')
 @login_required
 def logout():
-    pass
+    logout_user()
+    return redirect(url_for('home'))
 
 
 @app.route('/download')
