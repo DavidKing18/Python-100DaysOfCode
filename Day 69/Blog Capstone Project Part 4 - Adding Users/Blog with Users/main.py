@@ -1,15 +1,19 @@
-from flask import Flask, render_template, redirect, url_for, flash, request, abort
+from flask import Flask, render_template, redirect, url_for, flash, abort, request
 from flask_bootstrap import Bootstrap
 from flask_ckeditor import CKEditor
 from datetime import date
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.orm import relationship
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
-from forms import CreatePostForm, RegisterForm, LoginForm
+from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
 from functools import wraps
+from sqlalchemy.orm import relationship
+from sqlalchemy.ext.declarative import declarative_base
+from smtplib import SMTP
+import os
 
+Base = declarative_base()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
@@ -24,6 +28,9 @@ db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
+BLOG_EMAIL = "cornflakeschicago@gmail.com"
+PASSWORD = os.environ.get("CHICAGO_MAIL_PASSWORD")
+
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -34,35 +41,61 @@ def admin_only(function):
     @wraps(function)
     def decorated_function(*args, **kwargs):
         if current_user.id == 1:
-            function(*args, **kwargs)
+            return function(*args, **kwargs)
         else:
             return abort(403)
     return decorated_function
 
 
 # CONFIGURE TABLES
-class BlogPost(db.Model):
-    __tablename__ = "blog_posts"
-    id = db.Column(db.Integer, primary_key=True)
-    author = db.Column(db.String(250), nullable=False)
-    title = db.Column(db.String(250), unique=True, nullable=False)
-    subtitle = db.Column(db.String(250), nullable=False)
-    date = db.Column(db.String(250), nullable=False)
-    body = db.Column(db.Text, nullable=False)
-    img_url = db.Column(db.String(250), nullable=False)
-
-
 class User(UserMixin, db.Model):
     __tablename__ = "users"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(250), nullable=False)
     email = db.Column(db.String(250), unique=True, nullable=False)
-
     password = db.Column(db.String(250), nullable=False)
 
+    posts = relationship("BlogPost", back_populates="author")
+    comments = relationship("Comment", back_populates="comment_author")
 
-# with app.app_context():
-#     db.create_all()
+
+class BlogPost(db.Model):
+    __tablename__ = "blog_posts"
+    id = db.Column(db.Integer, primary_key=True)
+    author_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    author = relationship("User", back_populates="posts")
+
+    title = db.Column(db.String(250), unique=True, nullable=False)
+    subtitle = db.Column(db.String(250), nullable=False)
+    date = db.Column(db.String(250), nullable=False)
+    body = db.Column(db.Text, nullable=False)
+    img_url = db.Column(db.String(250), nullable=False)
+    comments = relationship("Comment", back_populates="parent_post")
+
+
+class Comment(db.Model):
+    __tablename__ = "comments"
+    id = db.Column(db.Integer, primary_key=True)
+    author_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    comment_author = relationship("User", back_populates="comments")
+    post_id = db.Column(db.Integer, db.ForeignKey("blog_posts.id"))
+    parent_post = relationship("BlogPost", back_populates="comments")
+    text = db.Column(db.Text, nullable=False)
+
+
+with app.app_context():
+    db.create_all()
+
+
+gravatar = Gravatar(app, size=100, rating='g', default='retro', force_default=False, force_lower=False, use_ssl=False,
+                    base_url=None)
+
+
+def send_email(email, message):
+    with SMTP("smtp.gmail.com", 587) as connection:
+        connection.starttls()
+        connection.login(user=BLOG_EMAIL, password=PASSWORD)
+        connection.sendmail(from_addr=BLOG_EMAIL, to_addrs=email, msg=message)
 
 
 @app.route('/')
@@ -80,12 +113,15 @@ def register():
                                                           method="pbkdf2:sha256", salt_length=8)
         email = register_form.email.data
         user = User.query.filter_by(email=email).first()
+        name = register_form.name.data
         if user is None:
-            new_user = User(name=register_form.name.data,
+            new_user = User(name=name,
                             email=email,
                             password=hash_and_salted_password)
             db.session.add(new_user)
             db.session.commit()
+            send_email(email=email, message=f"Subject: Welcome to David's Blog!🎉 \n\nHello {name.split(' ')[0]}, thank you for "
+                                            f"signing up for my blog.\nEnjoy!😉".encode('UTF-8'))
             login_user(new_user)
             return redirect(url_for('get_all_posts'))
         else:
@@ -121,11 +157,24 @@ def logout():
     return redirect(url_for('get_all_posts'))
 
 
-@app.route("/post/<int:post_id>")
+@app.route("/post/<int:post_id>", methods=["GET", "POST"])
 def show_post(post_id):
+    comment_form = CommentForm()
     requested_post = BlogPost.query.get(post_id)
+    if comment_form.validate_on_submit():
+        comment_text = comment_form.comment.data
+        if current_user.is_authenticated:
+            new_comment = Comment(text=comment_text,
+                                  comment_author=current_user,
+                                  parent_post=requested_post)
+            db.session.add(new_comment)
+            db.session.commit()
+            return redirect(url_for("show_post", post_id=post_id))
+        else:
+            flash(message="Log in to add comments.")
+            return redirect(url_for("login"))
     return render_template("post.html", post=requested_post, logged_in=current_user.is_authenticated,
-                           admin=User.query.filter_by(id=1).first())
+                           admin=User.query.filter_by(id=1).first(), form=comment_form)
 
 
 @app.route("/about")
@@ -133,12 +182,23 @@ def about():
     return render_template("about.html", logged_in=current_user.is_authenticated)
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
+    if request.method == "POST":
+        name = request.form["name"]
+        email_address = request.form['email']
+        phone = request.form["phone"]
+        contact_message = request.form["message"]
+        send_email(email=email_address, message=f"Subject: Contact successful, {name.split(' ')[0]}!👍\n\nName: {name}"
+                                                f"\nEmail: {email_address}\nPhone: {phone}\n"
+                                                f"Message: {contact_message}".encode("UTF-8"))
+        flash(message="Successfully sent your message.")
+        print("HEY")
+        return redirect(url_for('contact'))
     return render_template("contact.html", logged_in=current_user.is_authenticated)
 
 
-@app.route("/new-post")
+@app.route("/new-post", methods=["GET", "POST"])
 @login_required
 @admin_only
 def add_new_post():
