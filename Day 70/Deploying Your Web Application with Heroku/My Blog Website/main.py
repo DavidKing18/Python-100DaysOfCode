@@ -11,12 +11,15 @@ from functools import wraps
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 from smtplib import SMTP
+from dotenv import load_dotenv
 import os
+
+load_dotenv()
 
 Base = declarative_base()
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.getenv("KEY")
 ckeditor = CKEditor(app)
 Bootstrap(app)
 
@@ -28,8 +31,8 @@ db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-BLOG_EMAIL = "cornflakeschicago@gmail.com"
-PASSWORD = os.environ.get("CHICAGO_MAIL_PASSWORD")
+BLOG_EMAIL = os.getenv("BLOG_EMAIL", "cornflakeschicago@gmail.com")
+PASSWORD = os.getenv("CHICAGO_MAIL_PASSWORD")
 
 
 @login_manager.user_loader
@@ -120,8 +123,8 @@ def register():
                             password=hash_and_salted_password)
             db.session.add(new_user)
             db.session.commit()
-            send_email(email=email, message=f"Subject: Welcome to David's Blog!🎉 \n\nHello {name.split(' ')[0]}, thank you for "
-                                            f"signing up for my blog.\nEnjoy!😉".encode('UTF-8'))
+            send_email(email=email, message=f"Subject: Welcome to David's Blog!🎉 \n\nHello {name.split(' ')[0]}, thank"
+                                            f" you for signing up for my blog.\nEnjoy!😉".encode('UTF-8'))
             login_user(new_user)
             return redirect(url_for('get_all_posts'))
         else:

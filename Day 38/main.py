@@ -4,7 +4,7 @@ from datetime import datetime as dt
 
 APP_ID = os.environ["APP_ID"]
 API_KEY = os.environ["NUTRITIONIX_API_KEY"]
-TOKEN = os.environ['Sheety_Token']
+TOKEN = os.environ.get("SHEETY_TOKEN")
 
 GENDER = "MALE"
 WEIGHT_KG = "85"
