@@ -31,6 +31,41 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\Day 74\Google Trends Data - Resampling and Visualising Time Series\Bitcoin Search Trend.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Day 74\Google Trends Data - Resampling and Visualising Time Series\Daily Bitcoin Price.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Day 74\Google Trends Data - Resampling and Visualising Time Series\TESLA Search Trend vs Price.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Day 74\Google Trends Data - Resampling and Visualising Time Series\UE Benefits Search vs UE Rate 2004-19.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Day 74\Google Trends Data - Resampling and Visualising Time Series\UE Benefits Search vs UE Rate 2004-20.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
