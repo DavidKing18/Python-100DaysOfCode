@@ -3,7 +3,8 @@ from replit import clear
 import random
 import hangman_art
 from hangman_words import list_of_words
-
+print("wow")
+clear()
 # TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
 words = list_of_words
 stages = hangman_art.stages
@@ -12,7 +13,8 @@ stages = hangman_art.stages
 hangman_logo = hangman_art.logo
 print(hangman_logo)
 print(
-    "WELCOME TO MY HANGMAN GAME!! \n INSTRUCTION: You have 6 chances to guess a word. Length of the word is up to you. Goodluck!\n")
+    "WELCOME TO MY HANGMAN GAME!! \n INSTRUCTION: You have 6 chances to guess a word. Length of the word is up to "
+    "you. Goodluck!\n")
 desired_word_length = int(input("How many letters do you want in the word? "))
 
 word_list = []
@@ -51,7 +53,8 @@ while not end_of_game:
 
     # Check if user is wrong.
     if guess not in chosen_word:
-        # TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
+        # TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the
+        #  word.
         print(f"You guessed {guess}, that's not in the word. You lose a life.\nNumber of lives left: {lives - 1}")
         lives -= 1
         if lives == 0:

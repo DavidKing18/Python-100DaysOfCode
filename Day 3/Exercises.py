@@ -95,25 +95,25 @@ name2 = input("What is their name? \n").lower()
 
 
 combined_names = name1 + name2
-T_occurence = combined_names.count("t")
-R_occuerence = combined_names.count("r")
-U_occuerence = combined_names.count("u")
-E_occuerence = combined_names.count("e")
+T_occurrence = combined_names.count("t")
+R_occurrence = combined_names.count("r")
+U_occurrence = combined_names.count("u")
+E_occurrence = combined_names.count("e")
 
-L_occuerence = combined_names.count("l")
-O_occuerence = combined_names.count("o")
-V_occuerence = combined_names.count("v")
-E_occuerence = combined_names.count("e")
+L_occurrence = combined_names.count("l")
+O_occurrence = combined_names.count("o")
+V_occurrence = combined_names.count("v")
+E_occurrence = combined_names.count("e")
 
-score1 = T_occurence + R_occuerence + U_occuerence + E_occuerence
+score1 = T_occurrence + R_occurrence + U_occurrence + E_occurrence
 
-score2 = L_occuerence + O_occuerence + V_occuerence + E_occuerence
+score2 = L_occurrence + O_occurrence + V_occurrence + E_occurrence
 
 love_score = int(str(score1) + str(score2))
 
 if love_score < 10 or love_score > 90:
     print(f"Your score is {love_score}, you go together like coke and mentos.")
-elif love_score >= 40 and love_score <= 50:
+elif 40 <= love_score <= 50:
     print(f"Your score is {love_score}, you are alright together.")
 else:
     print(f"Your score is {love_score}.")

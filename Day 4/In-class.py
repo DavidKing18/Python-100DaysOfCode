@@ -9,13 +9,13 @@ print(my_module.pi)
 randomFloat = random.random()  # For random float between 0 and 0.999999999999
 print(randomFloat)
 
-randomFloat = random.random() * 5  # For random float between 0 and and 4.99999999999
+randomFloat = random.random() * 5  # For random float between 0 and 4.99999999999
 print(randomFloat)
 
 love_score = random.randint(1, 100)
 print(f"Your love score is {love_score}")
 
-''' LESSON 2 - Undertanding the offset and appending items to a list'''
+''' LESSON 2 - Understanding the offset and appending items to a list'''
 
 states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Connecticut", "Massachusetts", "Maryland",
                      "South Carolina", "New Hampshire", "Virginia", "New York", "North Carolina", "Rhode Island",

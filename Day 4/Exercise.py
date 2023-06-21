@@ -40,10 +40,10 @@ position = input("Where do you want to put the treasure? ")
 # 🚨 Don't change the code above 👆
 
 # Write your code below this row 👇
-horizontal = int(position[
-                     0]) - 1  # Accesses the first digit of the input which is the intended horizontal position only 1 greater because of indexing in python, hence the " - 1 ".
-vertical = int(position[
-                   1]) - 1  # Accesses the second digit of the input which is the intended vertical position only 1 greater because of indexing in python, hence the " - 1 ".
+horizontal = int(position[0]) - 1  # Accesses the first digit of the input which is the intended horizontal position
+# only 1 greater because of indexing in python, hence the " - 1 ".
+vertical = int(position[1]) - 1  # Accesses the second digit of the input which is the intended vertical position only 1
+# greater because of indexing in python, hence the " - 1 ".
 
 map[vertical][horizontal] = "X"  # Uses the map variable to modify or changed the value of the intended position.
 

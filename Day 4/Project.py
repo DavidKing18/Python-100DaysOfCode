@@ -1,4 +1,3 @@
-# Go to https://replit.com/@appbrewery/rock-paper-scissors-start?v=1
 import random
 
 rock = '''
@@ -41,7 +40,7 @@ elif user_choice == "1":
 elif user_choice == "2":
     print(scissors)
 else:
-    print("You have envtered and invalid input")
+    print("You have entered and invalid input")
 
 if (user_choice == "0") or (user_choice == "1") or (user_choice == "2"):
     print("Computer chose: ")
