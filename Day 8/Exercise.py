@@ -1,4 +1,4 @@
-'''EXERCISE 1 - PAINT AREA CALCULATOR'''
+"""EXERCISE 1 - PAINT AREA CALCULATOR"""
 
 # Write your code below this line 👇
 import math
@@ -35,6 +35,7 @@ def prime_checker(number):
     elif number == 2:
         print("It's a prime number.")
     elif number > 2:
+        check = ""
         for num in range(2, number):
             if number % num == 0:
                 check = "It's not a prime number."

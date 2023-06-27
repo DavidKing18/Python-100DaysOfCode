@@ -1,9 +1,8 @@
-from replit import clear
+import os
 from art import logo
 
 
 # Calculator
-
 
 def add(n1, n2):
     return n1 + n2
@@ -54,7 +53,7 @@ def calculator():
             answer = next_answer
         else:
             should_continue = False
-            clear()
+            os.system("cls")
             calculator()
 
 

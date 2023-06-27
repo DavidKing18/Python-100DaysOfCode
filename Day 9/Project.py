@@ -1,6 +1,7 @@
-''' PROJECT - SECRET AUCTION PROGRAM'''
-from replit import clear
+""" PROJECT - SECRET AUCTION PROGRAM"""
+# from replit import clear
 from art import logo
+import os
 
 print(logo)
 print("Welcome to the secret auction program. 👀 ")
@@ -12,14 +13,15 @@ def add_bid(name, bid):
     bid_record[name] = bid
 
 
-def highest_bid(dict):
-    highest_bid = 0
-    for bidder in dict:
-        bid_amount = dict[bidder]
-        if bid_amount > highest_bid:
-            highest_bid = dict[bidder]
+def highest_bid(bids):
+    largest_bid = 0
+    highest_bidder = ""
+    for bidder in bids:
+        bid_amount = bids[bidder]
+        if bid_amount > largest_bid:
+            largest_bid = bid_amount
             highest_bidder = bidder
-    print(f"The winner is {highest_bidder} with a bid of ${highest_bid}.\n")
+    print(f"The winner is {highest_bidder} with a bid of ${largest_bid}.\n")
 
 
 more_bids = True
@@ -30,9 +32,9 @@ while more_bids:
     more_bidders = input("Are there any other bidders? Type 'yes' or 'no'.\n").lower()
     if more_bidders == 'yes':
         more_bids = True
-        clear()
+        os.system("cls")
     elif more_bidders == 'no':
-        clear()
+        os.system("cls")
         highest_bid(bid_record)
         more_bids = False
     else:

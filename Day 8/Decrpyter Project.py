@@ -1,9 +1,9 @@
-"CEASER CIPHER PROJECT"
+"""CEASER CIPHER PROJECT"""
 from english_words import get_english_words_set
-words = get_english_words_set(['web2'], lower=True)
-
-
 from art import logo
+
+
+words = get_english_words_set(['web2'], lower=True)
 
 print(logo)
 print("WELCOME TO MY CEASER CIPHER DECRYPTER 🙂")

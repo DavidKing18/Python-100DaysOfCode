@@ -1,4 +1,4 @@
-''' EXERCISE 1 - AVERAGE HEIGHT '''
+""" EXERCISE 1 - AVERAGE HEIGHT """
 print("AVERAGE HEIGHT CALCULATOR!! ")
 # 🚨 Don't change the code below 👇
 student_heights = input("Input a list of student heights: ").split()
@@ -13,9 +13,9 @@ number_of_students = 0
 for height in student_heights:
     total_height += height
     number_of_students += 1
-avereage_height = total_height / number_of_students
-avereage_height_approx = round(avereage_height)
-print(f"Average heigt is: {avereage_height_approx}")
+average_height = total_height / number_of_students
+average_height_approx = round(average_height)
+print(f"Average height is: {average_height_approx}")
 print()
 
 '''EXERCISE 2 - HIGH SCORE'''

@@ -1,4 +1,4 @@
-'''LESSON 1 - FUNTIONS WITH INPUTS'''
+"""LESSON 1 - FUNTIONS WITH INPUTS"""
 
 
 def greet():

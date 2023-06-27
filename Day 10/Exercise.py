@@ -1,4 +1,4 @@
-''' Exercise 1 - Days in Month '''
+""" Exercise 1 - Days in Month """
 
 
 def is_leap(year):

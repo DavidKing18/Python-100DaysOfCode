@@ -1,7 +1,7 @@
-''' LESSON 1 - THE PYTHON DICTINOARY: DEEP DIVE'''
+""" LESSON 1 - THE PYTHON DICTINOARY: DEEP DIVE"""
 
 programing_dictionary = {
-    "Bug": "An error in a prgram that prevents the program frm running as expected.",
+    "Bug": "An error in a program that prevents the program from running as expected.",
     "Function": "A piece of code that you can easily call over and over again."
 }
 

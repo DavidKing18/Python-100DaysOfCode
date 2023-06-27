@@ -1,4 +1,4 @@
-''' EXERCISE 1 - GRADING PROGRAM '''
+""" EXERCISE 1 - GRADING PROGRAM """
 
 student_scores = {
     "Harry": 81,
@@ -50,10 +50,7 @@ travel_log = [
 # to be added to the travel_log. 👇
 
 def add_new_country(country_visited, times_visited, cities_visited):
-    new_country = {}
-    new_country["country"] = country_visited
-    new_country["visits"] = times_visited
-    new_country["cities"] = cities_visited
+    new_country = {"country": country_visited, "visits": times_visited, "cities": cities_visited}
     travel_log.append(new_country)
 
 
