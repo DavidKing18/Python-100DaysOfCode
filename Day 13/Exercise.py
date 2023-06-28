@@ -11,7 +11,8 @@ print()
 """ Debugging Leap Year """
 
 year = int(input(
-    "Which year do you want to check?"))  # before fix: year = input("Which year do you want to check?") >>>  input was read as a string
+    "Which year do you want to check?"))  # before fix: year = input("Which year do you want to check?") >>>  input
+# was read as a string
 
 if year % 4 == 0:
     if year % 100 == 0:

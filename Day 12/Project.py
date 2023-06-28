@@ -8,10 +8,11 @@ def run_game():
     print("Welcome to the Number Guessing Game!")
     print("I'm thinking of a number between 1 and 100.")
     level_choice = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
+    attempts = 0
     if level_choice == 'easy':
-        attempts = 10
+        attempts += 10
     elif level_choice == 'hard':
-        attempts = 5
+        attempts += 5
     else:
         print("You have entered an invalid input.")
 
@@ -38,7 +39,7 @@ def run_game():
             game_end = True
             print(f"You've run out of guesses, answer was {computer_choice}, you lose.")
 
-        if (game_end == True) or (attempts == 0):
+        if (game_end is True) or (attempts == 0):
             replay = input("Do you want to play again? Type 'yes' or 'no': ").lower()
             if replay == 'yes':
                 clear()

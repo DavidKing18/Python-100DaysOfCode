@@ -10,7 +10,7 @@
 ## The deck is unlimited in size. 
 ## There are no jokers. 
 ## The Jack/Queen/King all count as 10.
-## The the Ace can count as 11 or 1.
+## The Ace can count as 11 or 1.
 ## Use the following list as the deck of cards:
 ## cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 ## The cards in the list have equal probability of being drawn.
@@ -32,7 +32,7 @@ cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 
 def play():
-    want_to_play = input("Do you want to play a game of Blackjack? Type 'y' or'n': ").lower()
+    want_to_play = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
     if want_to_play == "y":
         clear()
         print(logo)
@@ -68,7 +68,7 @@ def play():
                 elif count(computer_cards) > 21:
                     print(f"    Your final hand: {user_cards}, final score: {count(user_cards)}")
                     print(f"    Computer's final hand: {computer_cards}, final score: {count(computer_cards)}")
-                    print("Oponnent went over. You win 😀")
+                    print("Opponent went over. You win 😀")
                     play()
                 else:
                     want_another_card = input("Type 'y' to get another card, type 'n' to pass: ").lower()
@@ -85,7 +85,7 @@ def play():
                         if count(computer_cards) > 21:
                             print(f"    Your final hand: {user_cards}, final score: {count(user_cards)}")
                             print(f"    Computer's final hand: {computer_cards}, final score: {count(computer_cards)}")
-                            print("Oponnent went over. You win 😀")
+                            print("Opponent went over. You win 😀")
                             play()
                         elif count(user_cards) > count(computer_cards):
                             print(f"    Your final hand: {user_cards}, final score: {count(user_cards)}")

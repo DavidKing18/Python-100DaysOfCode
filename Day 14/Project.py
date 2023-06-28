@@ -6,14 +6,13 @@ from replit import clear
 first_identity = choice(data)
 score = 0
 print(logo)
-print("Welcome to my #who'sGotMoreFollowers? game!\nLet's go!!")
+print("Welcome to my Who'sGotMoreFollowers? game!\nLet's go!!")
 
 should_continue = True
 while should_continue:
-    data.remove(first_identity)
     second_identity = choice(data)
-    data.append(first_identity)
-    second_identity = choice(data)
+    while second_identity == first_identity:
+        second_identity = choice(data)
 
     name1 = first_identity['name']
     followers1 = first_identity['follower_count']
@@ -33,19 +32,19 @@ while should_continue:
 
     def check(user_response):
         if user_response == 'a':
-            return (followers1 > followers2)
+            return followers1 > followers2
         elif user_response == 'b':
-            return (followers2 > followers1)
+            return followers2 > followers1
 
 
-    if check(response) == True:
+    if check(response):
         score += 1
         first_identity = second_identity
         clear()
         print(logo)
         print(f"You're right! Current score: {score}")
 
-    elif check(response) == False:
+    elif not check(response):
         should_continue = False
         clear()
         print(logo)
