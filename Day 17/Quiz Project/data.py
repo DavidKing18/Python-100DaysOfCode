@@ -4,7 +4,7 @@ question_data = [{"category": "Science: Computers", "type": "boolean", "difficul
                   "incorrect_answers": ["False"]},
                  {"category": "Science: Computers", "type": "boolean", "difficulty": "medium",
                   "question": "The common software-programming acronym &quot;I17N&quot; comes from "
-                              "the term &quot;Interlocalization&quot;.",
+                              "the term &quot;Inter-localization&quot;.",
                   "correct_answer": "False", "incorrect_answers": ["True"]},
                  {"category": "Science: Computers", "type": "boolean", "difficulty": "medium",
                   "question": "The very first recorded computer &quot;bug&quot; was a moth found "

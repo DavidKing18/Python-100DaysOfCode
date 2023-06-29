@@ -8,20 +8,8 @@ def statement_report():
     print(f"Money: ${money}")
 
 
-def check_water(coffee):
-    if MENU[coffee]['ingredients']['water'] <= resources['water']:
-        return True
-    return False
-
-
-def check_milk(coffee):
-    if MENU[coffee]['ingredients']['milk'] <= resources['milk']:
-        return True
-    return False
-
-
-def check_coffee(coffee):
-    if MENU[coffee]['ingredients']['coffee'] <= resources['coffee']:
+def check_ingredient(ingredient, coffee):
+    if MENU[coffee]['ingredients'][ingredient] <= resources[ingredient]:
         return True
     return False
 
@@ -40,11 +28,12 @@ def remove_from_resource(coffee_type):
 
 def enough_resource(coffee_type):
     if coffee_type == "espresso":
-        if check_water(coffee_type) == check_coffee(coffee_type) == True:
+        if check_ingredient("water", coffee_type) and check_ingredient("coffee", coffee_type):
             return True
         return False
     elif not order == 'espresso':
-        if check_water(coffee_type) == check_milk(coffee_type) == check_coffee(coffee_type) == True:
+        if check_ingredient("water", coffee_type) and check_ingredient("milk", coffee_type) \
+                and check_ingredient("coffee", coffee_type):
             return True
         return False
 
@@ -61,28 +50,13 @@ def run_machine(coffee_type):
 
 
 def failed_output_statement(coffee_type):
-    if coffee_type == 'espresso':
-        if check_water(coffee_type) == check_coffee(coffee_type) == True:
-            print("Sorry, there is not enough water nor coffee.")
-        elif not check_water("espresso"):
-            print("Sorry, there is not enough water.")
-        elif not check_coffee("espresso"):
-            print("Sorry, there is not enough milk.")
-    else:
-        if check_water(coffee_type) == check_milk(coffee_type) == check_coffee(coffee_type) == True:
-            print("Sorry, there is not enough water, coffee nor milk.")
-        elif check_water(coffee_type) == check_milk(coffee_type) == False:
-            print("Sorry, there is not enough water nor milk.")
-        elif check_water(coffee_type) == check_coffee(coffee_type) == False:
-            print("Sorry, there is not enough water nor coffee.")
-        elif check_milk(coffee_type) == check_coffee(coffee_type) == False:
-            print("Sorry, there is not enough coffee nor milk.")
-        elif not check_water(coffee_type):
-            print("Sorry, there is not enough water.")
-        elif not check_milk(coffee_type):
-            print("Sorry, there is not enough milk.")
-        elif not check_coffee(coffee_type):
-            print("Sorry, there is not enough cofffee.")
+    unavailable_ingredients = []
+    for ingredient in resources:
+        if coffee_type == "espresso" and ingredient == "milk":
+            break
+        elif not check_ingredient(ingredient, coffee_type):
+            unavailable_ingredients.append(ingredient)
+    print(f"sorry, there is not enough {' & '.join(unavailable_ingredients)}")
 
 
 money = 0
@@ -100,29 +74,7 @@ while machine_on:
     if order == "report":
         statement_report()
 
-    elif order == 'espresso':
-        if enough_resource(order):
-            amount_paid = sum_up()
-            if can_buy(order):
-                money += MENU[order]['cost']
-                run_machine(order)
-            else:
-                print("Sorry that's not enough money. Money refunded.👀")
-        else:
-            failed_output_statement(order)
-
-    elif order == 'latte':
-        if enough_resource(order):
-            amount_paid = sum_up()
-            if can_buy(order):
-                money += MENU[order]['cost']
-                run_machine(order)
-            else:
-                print("Sorry that's not enough money. Money refunded.👀")
-        else:
-            failed_output_statement(order)
-
-    elif order == 'cappuccino':
+    elif order == "espresso" or order == 'latte' or order == 'cappuccino':
         if enough_resource(order):
             amount_paid = sum_up()
             if can_buy(order):
@@ -137,7 +89,9 @@ while machine_on:
         resources["water"] = 300
         resources["milk"] = 200
         resources["coffee"] = 100
+
     elif order == "off":
         machine_on = False
+
     else:
-        print("You have entered an invalid input. Again? 🙂")
+        print("You have entered an invalid input. Try again? 🙂")

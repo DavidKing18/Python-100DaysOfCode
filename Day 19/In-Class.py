@@ -20,5 +20,3 @@ timmy = Turtle()
 teddy = Turtle()
 timmy.color('blue')
 teddy.color('red')
-
-

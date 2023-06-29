@@ -1,6 +1,7 @@
 # HOW TO USE OOP CLASSES AND OBJECTS
 
 from turtle import Turtle, Screen
+from prettytable import PrettyTable
 
 timmy = Turtle()
 print(timmy)
@@ -13,8 +14,6 @@ print(my_screen.canvheight)
 my_screen.exitonclick()
 
 # Practice Modifying Object Attributes and Calling Methods
-
-from prettytable import PrettyTable
 
 table = PrettyTable()
 
