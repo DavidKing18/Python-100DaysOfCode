@@ -1,4 +1,4 @@
-''' TREASURE ISLAND GAME '''
+""" TREASURE ISLAND GAME """
 
 print('''
   ,d                                                                       
@@ -12,16 +12,19 @@ MM88MMM 8b,dPPYba,  ,adPPYba, ,adPPYYba, ,adPPYba, 88       88 8b,dPPYba,
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 
-# https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+# https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.
+# drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
 
 # Write your code below this line 👇
 path1 = input('You\'re at a cross road. Where do you want to go? Type"left" or "right".\n')
 if path1.lower() == "left":  # Game Continues
     path2 = input(
-        'You\'ve arrived at a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across.\n')
+        'You\'ve arrived at a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. '
+        'Type "swim" to swim across.\n')
     if path2.lower() == "wait":  # Game Continues
         path3 = input(
-            "You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? \n")
+            "You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. "
+            "Which colour do you choose? \n")
         if path3.lower() == "yellow":  # Game Success
             print("You Win!!!")
             print()
