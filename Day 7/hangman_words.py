@@ -10,3 +10,7 @@ from english_words import get_english_words_set
 #     lower-case letters; with no punctuation.
 
 list_of_words = get_english_words_set(['web2'], lower=True)
+
+# with open("C:\\Users\\DAVID\\Desktop\\words.txt", "w") as file:
+#     for word in sorted(list_of_words):
+#         file.write(f"{word}\n")
