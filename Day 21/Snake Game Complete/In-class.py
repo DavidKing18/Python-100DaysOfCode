@@ -1,4 +1,5 @@
 class Animal:
+
     def __init__(self):
         self.num_eyes = 2
 
@@ -7,6 +8,7 @@ class Animal:
 
 
 class Fish(Animal):
+
     def __init__(self):
         super().__init__()
 

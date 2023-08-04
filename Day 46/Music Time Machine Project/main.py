@@ -10,7 +10,7 @@ SPOTIPY_CLIENT_ID = 'a99b8925dea6481bbaa19a635d014365'
 SPOTIPY_CLIENT_SECRET = os.environ["SPOTIPY_CLIENT_SECRET"]
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=SPOTIPY_CLIENT_ID, client_secret=SPOTIPY_CLIENT_SECRET,
-                                               redirect_uri="http://example.com", scope=scope, show_dialog=True,
+                                               redirect_uri="https://example.com", scope=scope, show_dialog=True,
                                                cache_path="./token.txt"))
 
 USER_ID = sp.current_user()['id']
