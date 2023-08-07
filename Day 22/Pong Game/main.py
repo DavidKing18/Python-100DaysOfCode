@@ -1,4 +1,4 @@
-from turtle import Screen, Turtle
+from turtle import Screen
 from paddle import Paddle, CenterLines
 from ball import Ball
 import time
@@ -45,7 +45,7 @@ while game_is_on:
         ball.reset_position()
         scoreboard.r_point()
 
-    if scoreboard.l_score > 6 or scoreboard.r_score > 6:
+    if (scoreboard.l_score > 6) or (scoreboard.r_score > 6):
         game_is_on = False
         if scoreboard.l_score > scoreboard.r_score:
             winner = 'Player 1'
