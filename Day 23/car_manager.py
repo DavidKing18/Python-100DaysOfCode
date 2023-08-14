@@ -3,9 +3,11 @@ import random
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 0.02
+y_axis = [-250+(20*i) for i in range(26)]
 
 
 class CarManager(Turtle):
+
     def __init__(self):
         super().__init__()
         self.create_car()
@@ -15,7 +17,7 @@ class CarManager(Turtle):
         self.shape('square')
         self.shapesize(stretch_len=2, stretch_wid=1)
         self.color(random.choice(COLORS))
-        self.goto(300, random.randint(-250, 250))
+        self.goto(300, random.choice(y_axis))
 
     def move_car(self):
         self.backward(STARTING_MOVE_DISTANCE)

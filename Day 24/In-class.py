@@ -24,3 +24,8 @@ with open("new_file.txt", "w") as file:
 #     contents = file.read()
 #     print(contents)
 
+with open("my_file.txt", "r") as file:
+    print(file.read(), "\n")
+    print(file.readlines(), "\n")
+    print(file.readline(), "\n")
+

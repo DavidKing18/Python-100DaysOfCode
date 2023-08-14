@@ -22,7 +22,17 @@ screen.onkey(snake.right, "Right")
 screen.onkey(snake.right, "r")
 
 game_is_on = True
-count = 0
+count = 1
+
+
+def game_reset():
+    global count
+    scoreboard.reset()
+    snake.reset()
+    food.refresh()
+    count = 1
+
+
 while game_is_on:
     screen.update()
     time.sleep(0.1)
@@ -34,7 +44,7 @@ while game_is_on:
     # Detect collision with food.
     if snake.head.distance(food) < 15:
         # Big Bonus every five eat.
-        if (count != 0) and (count % 5 == 0):
+        if count % 5 == 0:
             scoreboard.bonus_score()
         if (count + 1) % 5 == 0:
             food.bonus()
@@ -46,13 +56,11 @@ while game_is_on:
         count += 1
     # Detect Collision with wall.
     if (x_boundary > 300 or x_boundary < -300) or (y_boundary > 300 or y_boundary < -300):
-        scoreboard.reset()
-        snake.reset()
+        game_reset()
 
     # Detect collision with tail.
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
-            scoreboard.reset()
-            snake.reset()
+            game_reset()
 
 screen.exitonclick()

@@ -33,6 +33,8 @@ while game_is_on:
     # Detect collision with car
     for car in cars:
         if car.distance(player) < 20:
+            scoreboard.goto(player.position())
+            scoreboard.write("🥴", True, align="center", font=("Courier", 17, "normal"))
             scoreboard.game_over()
             game_is_on = False
 

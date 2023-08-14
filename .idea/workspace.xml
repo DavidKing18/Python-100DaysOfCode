@@ -5,25 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="426d1f8c-df4e-4096-89e1-f528d93a4c56" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Python-100DaysOfCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python-100DaysOfCode.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rGraphicsSettings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rSettings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day 21/Snake Game Complete/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 21/Snake Game Complete/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day 21/Snake Game Complete/scoreboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 21/Snake Game Complete/scoreboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day 21/Snake Game Complete/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 21/Snake Game Complete/snake.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day 22/Pong Game/ball.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 22/Pong Game/ball.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day 22/Pong Game/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 22/Pong Game/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day 22/Pong Game/paddle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 22/Pong Game/paddle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day 22/Pong Game/scoreboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 22/Pong Game/scoreboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 23/car_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 23/car_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 23/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 23/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 23/scoreboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 23/scoreboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 24/In-class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 24/In-class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 24/Mail Merge Project Start/Output/ReadyToSend/example.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 24/Mail Merge Project Start/Output/ReadyToSend/letter_for_Aang.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 24/Mail Merge Project Start/Output/ReadyToSend/letter_for_Appa.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 24/Mail Merge Project Start/Output/ReadyToSend/letter_for_Katara.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 24/Mail Merge Project Start/Output/ReadyToSend/letter_for_Momo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 24/Mail Merge Project Start/Output/ReadyToSend/letter_for_Sokka.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 24/Mail Merge Project Start/Output/ReadyToSend/letter_for_Toph.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 24/Mail Merge Project Start/Output/ReadyToSend/letter_for_Uncle Iroh.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 24/Mail Merge Project Start/Output/ReadyToSend/letter_for_Zuko.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 24/Snake Game (Improved)/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 24/Snake Game (Improved)/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 24/Snake Game (Improved)/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 24/Snake Game (Improved)/snake.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,19 +45,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.main (1)">
+    <configuration name="In-class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python-100DaysOfCode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 24" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 24/In-class.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-100DaysOfCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -57,12 +88,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 22/Pong Game" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 25/US States Game/us-states-game-start" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 22/Pong Game/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 25/US States Game/us-states-game-start/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python-100DaysOfCode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 24/Mail Merge Project Start" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 24/Mail Merge Project Start/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -75,13 +128,16 @@
       <module name="Python-100DaysOfCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 21/Snake Game Complete" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 24/Snake Game (Improved)" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 21/Snake Game Complete/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 24/Snake Game (Improved)/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -98,12 +154,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 21/Snake Game Complete" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 24/Snake Game (Improved)" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 21/Snake Game Complete/snake.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 24/Snake Game (Improved)/snake.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -117,6 +173,8 @@
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.snake" />
+        <item itemvalue="Python.In-class" />
+        <item itemvalue="Python.main (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +186,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1691394041566</updated>
-      <workItem from="1691394043827" duration="9418000" />
+      <workItem from="1691394043827" duration="9839000" />
+      <workItem from="1691566294012" duration="3165000" />
+      <workItem from="1691658546045" duration="4069000" />
+      <workItem from="1692002323712" duration="8709000" />
     </task>
     <servers />
   </component>
@@ -147,8 +208,12 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1691422326710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 22/Pong Game" />
-    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$main.coverage" NAME="main Coverage Results" MODIFIED="1691409291769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 21/Snake Game Complete" />
-    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$snake.coverage" NAME="snake Coverage Results" MODIFIED="1691401176879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 21/Snake Game Complete" />
+    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1692007711729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 23" />
+    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$In_class.coverage" NAME="In-class Coverage Results" MODIFIED="1692008737911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 24" />
+    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1692010942853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 25/US States Game/us-states-game-start" />
+    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$asdf.coverage" NAME="asdf Coverage Results" MODIFIED="1692004607672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 23" />
+    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$main.coverage" NAME="main Coverage Results" MODIFIED="1692010761831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 24/Snake Game (Improved)" />
+    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1692008402526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 24/Mail Merge Project Start" />
+    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$snake.coverage" NAME="snake Coverage Results" MODIFIED="1692010390561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 24/Snake Game (Improved)" />
   </component>
 </project>
