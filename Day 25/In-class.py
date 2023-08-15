@@ -30,36 +30,35 @@
 ##################################
 import pandas
 
-# data = pandas.read_csv("weather_data.csv")
-# data_dict = data.to_dict()
-# print(data_dict)
+data = pandas.read_csv("weather_data.csv")
+data_dict = data.to_dict()
+print(data_dict)
+
+temp_list = data["temp"].to_list()
+print(temp_list)
+
+print(data["temp"].mean())  # average/mean of a series
+
+print(data["temp"].max())  # maximum value in series
 #
-# temp_list = data["temp"].to_list()
-# print(temp_list)
-#
-# print(data["temp"].mean())  # average/mean of a series
-#
-# print(data["temp"].max())  # maximum value in series
-#
-# # Get Data in Columns
+# Get Data in Columns
 # print(data["condition"])
 # print(data.condition)
-#
-# # Get data in row
+
+# Get data in row
 # print(data[data.day == "Monday"])
 # print(data[data.temp == data.temp.max()])
-
+#
 # monday = data[data.day == "Monday"]
 # print(monday.condition)
 #
 # monday_temp = int(monday.temp)
 # temp_in_fahrenheit = 1.8 * monday_temp + 32
 # print(temp_in_fahrenheit)
-
-# Create a dataFrame from scratch
-
+#
+# # Create a dataFrame from scratch
+#
 # data_dict = {"students": ["Amy", "James", "Angela"], "scores": [76, 56, 65]}
 # data = pandas.DataFrame(data_dict)
 # print(data)
 # data.to_csv("new_data.csv")
-

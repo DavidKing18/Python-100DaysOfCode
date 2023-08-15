@@ -40,6 +40,7 @@ while len(correct_guesses) < 50:
             # OR - missing_states = list(set(states_list) - set(correct_guesses))
             data = pandas.DataFrame(missing_states)
             data.to_csv("states_to_learn.csv")
+        screen.exitonclick()
         break
 
 # states_to_learn.csv michigan
