@@ -12,9 +12,9 @@
 #
 # numbers = [number * 2 for number in range(1, 5)]
 # print(numbers)
-#
-# # Conditional List Comprehension
-#
+
+# Conditional List Comprehension
+
 # names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
 # short_names = [name for name in names if len(name) < 5]
 # print(short_names)
@@ -25,9 +25,9 @@
 # ################################################
 # #       HOW TO USE DICTIONARY COMPREHENSION
 # ################################################
-#
-# names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
-#
+
+names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
+
 # import random
 #
 # students_score = {student: random.randint(1, 100) for student in names}
@@ -36,10 +36,10 @@
 # passed_students = {student: score for (student, score) in students_score.items() if score > 59}
 # print(passed_students)
 
-
 ################################################
 #    HOW TO ITERATE OVER A PANDAS DATAFRAME
 ################################################
+
 import pandas
 
 student_dict = {

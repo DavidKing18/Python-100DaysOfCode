@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="426d1f8c-df4e-4096-89e1-f528d93a4c56" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day 25/In-class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 25/In-class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day 25/US States Game/us-states-game-start/50_states.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Day 25/US States Game/50_states.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day 25/US States Game/us-states-game-start/blank_states_img.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Day 25/US States Game/blank_states_img.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day 25/US States Game/us-states-game-start/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 25/US States Game/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day 25/US States Game/us-states-game-start/states_to_learn.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day 26/In-class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day 26/In-class.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +48,8 @@
       <recent name="C:\Users\DAVID\Documents\My files\Udemy\Python-100DaysOfCode\Day 25\US States Game" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main (1)">
-    <configuration name="Exercise" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Project">
+    <configuration name="In-class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-100DaysOfCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -61,12 +57,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 25" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 26" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 25/Exercise.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 26/In-class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -75,7 +71,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="In-class (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Project" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python-100DaysOfCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -83,12 +79,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 25" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 7" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 25/In-class.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 7/Project.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -111,6 +107,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 25/US States Game/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python-100DaysOfCode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 23" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 23/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,35 +181,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="snake" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python-100DaysOfCode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Day 24/Snake Game (Improved)" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Day 24/Snake Game (Improved)/snake.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.Exercise" />
-        <item itemvalue="Python.In-class (1)" />
+        <item itemvalue="Python.Project" />
+        <item itemvalue="Python.main (2)" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.snake" />
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.In-class" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +204,9 @@
       <workItem from="1691658546045" duration="4069000" />
       <workItem from="1692002323712" duration="8709000" />
       <workItem from="1692080459492" duration="6728000" />
-      <workItem from="1692118179715" duration="4412000" />
+      <workItem from="1692118179715" duration="6309000" />
+      <workItem from="1692255854483" duration="3399000" />
+      <workItem from="1692266012685" duration="5128000" />
     </task>
     <servers />
   </component>
@@ -227,14 +225,15 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1692007711729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 23" />
+    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1692273875892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 23" />
     <SUITE FILE_PATH="coverage/Python_100DaysOfCode$Exercise.coverage" NAME="Exercise Coverage Results" MODIFIED="1692117446363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 25" />
-    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$In_class.coverage" NAME="In-class Coverage Results" MODIFIED="1692008737911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 24" />
-    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1692122616700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 25/US States Game" />
+    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$In_class.coverage" NAME="In-class Coverage Results" MODIFIED="1692262928750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 26" />
+    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1692273221386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 25/US States Game" />
     <SUITE FILE_PATH="coverage/Python_100DaysOfCode$asdf.coverage" NAME="asdf Coverage Results" MODIFIED="1692004607672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 23" />
-    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$main.coverage" NAME="main Coverage Results" MODIFIED="1692010761831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 24/Snake Game (Improved)" />
+    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$main.coverage" NAME="main Coverage Results" MODIFIED="1692273689792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 24/Snake Game (Improved)" />
     <SUITE FILE_PATH="coverage/Python_100DaysOfCode$main__3_.coverage" NAME="main (3) Coverage Results" MODIFIED="1692008402526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 24/Mail Merge Project Start" />
     <SUITE FILE_PATH="coverage/Python_100DaysOfCode$snake.coverage" NAME="snake Coverage Results" MODIFIED="1692010390561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 24/Snake Game (Improved)" />
     <SUITE FILE_PATH="coverage/Python_100DaysOfCode$In_class__1_.coverage" NAME="In-class (1) Coverage Results" MODIFIED="1692117092211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 25" />
+    <SUITE FILE_PATH="coverage/Python_100DaysOfCode$Project.coverage" NAME="Project Coverage Results" MODIFIED="1692274014924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day 7" />
   </component>
 </project>
