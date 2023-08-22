@@ -21,7 +21,6 @@ button = Button(text="Click Me", command=button_clicked)
 button.grid(column=1, row=1)
 button.config(padx=5, pady=5)
 
-
 new_button = Button(text="Click Me Instead", command=button_clicked)
 new_button.grid(column=2, row=0)
 new_button.config(padx=5, pady=5)

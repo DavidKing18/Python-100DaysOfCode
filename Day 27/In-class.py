@@ -7,11 +7,10 @@ import tkinter
 window = tkinter.Tk()
 window.title("My first GUI Program")
 window.minsize(width=500, height=300)
-
 #  Label
 
 my_label = tkinter.Label(text="I am a Label", font=("Arial", 24, "bold"))
-my_label.pack(side="left", expand=True)
+my_label.pack(side="right", expand=True)
 
 window.mainloop()
 
@@ -24,7 +23,8 @@ window.mainloop()
 import turtle
 
 tim = turtle.Turtle()
-tim.write("Some Text", font=("New Times Roman", 88, "bold"))
+tim.hideturtle()
+tim.write("Some Text", align='center', font=("New Times Roman", 88, "bold"))
 screen = turtle.Screen()
 screen.exitonclick()
 
@@ -73,5 +73,6 @@ class Car:
 
 
 my_car = Car(make='Nissan')
+print(my_car.make)
 print(my_car.model)
 
