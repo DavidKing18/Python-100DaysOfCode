@@ -19,9 +19,7 @@ def generate_password():
     password_letters = [choice(letters) for _ in range(randint(8, 10))]
     password_numbers = [choice(numbers) for _ in range(randint(2, 4))]
     password_symbols = [choice(symbols) for _ in range(randint(2, 4))]
-
     password = [char for char in password_letters + password_numbers + password_symbols]
-
     shuffle(password)
     generated_password = "".join(password)
 
@@ -59,17 +57,17 @@ def save():
     if (len(website) < 1) or (len(password) < 1) or (len(username) < 1):
         messagebox.showinfo(title="Oops", message="Please don't leave any of the fields empty!")
     elif password in common_passwords:
-        password_validity_label1.grid_remove()
+        pwd_validity_label1.grid_remove()
         add_button.grid(row=5, column=1)
-        password_validity_label2.grid(row=4, column=1)
+        pwd_validity_label2.grid(row=4, column=1)
     elif (len(password) < 8) or (not capital_letter_exists(password)) or (not symbol_exists(password)) \
             or (not number_exists(password)):
         add_button.grid(row=5, column=1)
-        password_validity_label2.grid_remove()
-        password_validity_label1.grid(row=4, column=1, columnspan=6)
+        pwd_validity_label2.grid_remove()
+        pwd_validity_label1.grid(row=4, column=1, columnspan=6)
     else:
-        password_validity_label1.grid_remove()
-        password_validity_label2.grid_remove()
+        pwd_validity_label1.grid_remove()
+        pwd_validity_label2.grid_remove()
         add_button.grid(row=4, column=1)
         is_ok = messagebox.askokcancel(title=f"Website: {website}",
                                        message=f"These are the details entered: \nEmail: {username} \n"
@@ -103,10 +101,11 @@ username_label.grid(column=0, row=2)
 password_label = Label(text="Password:")
 password_label.grid(column=0, row=3)
 
-password_validity_label1 = Label(text="**Password must contain 8 characters (including at least \none capital letter "
-                                      "and a special character)🥴                               ",
-                                 fg="red")
-password_validity_label2 = Label(text="**Password is too common boss 🤲🏾", fg="red")
+pwd_validity_label1 = Label(text="**Password must contain 8 characters (including at least \none capital letter and a "
+                                 "special character)🥴                               ",
+                            fg="red")
+pwd_validity_label2 = Label(text="**Password is too common boss 🤲🏾", fg="red")
+
 # Inputs
 website_entry = Entry(width=50)
 website_entry.grid(column=1, row=1, columnspan=2)

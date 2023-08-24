@@ -1,6 +1,7 @@
 #######################################################################
 #       Catching Exceptions: The try catch except finally Pattern
 #######################################################################
+import math
 
 # # FileNotFoundError
 # with open("a_file.txt") as file:
@@ -64,6 +65,5 @@ weight = float(input("Weight (in kg): "))
 if height > 3:
     raise ValueError("Human height should not be over 3 meters.")
 
-bmi = weight / height**2
+bmi = weight / math.pow(height, 2)
 print(bmi)
-
