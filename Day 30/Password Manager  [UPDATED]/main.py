@@ -110,8 +110,7 @@ def find_password():
         messagebox.showinfo(title="Error", message="No Data File Found.")
     else:
         if website in record:
-            username = record[website]['username']
-            password = record[website]['password']
+            username, password = record[website]['username'], record[website]['password']
             messagebox.showinfo(title=f"{website}",
                                 message=f"Username: {username}\nPassword: "
                                         f"{password}\n\n(Copied to clipboard).")
